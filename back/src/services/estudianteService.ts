@@ -7,7 +7,7 @@ export class EstudianteService implements IEstudianteService{
     constructor(estudianteRepository:IEstudianteRepository) {
        this.estudianteRepository = estudianteRepository
     }
-    
+        
     async findEstudianteById(estudianteId?: number): Promise<IEstudiante | null> {
         return await this.estudianteRepository.findById(estudianteId);
     }

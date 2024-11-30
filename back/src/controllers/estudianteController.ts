@@ -134,6 +134,3 @@ export const deleteEstudiante = async (req: Request, res: Response): Promise<voi
      res.status(500).json({ message: "Ocurrio un error en el servidor." })    
   }
 }
-
-
-
