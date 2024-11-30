@@ -1,7 +1,7 @@
 import { pool } from "../connectPg";
 import { IInscribe, IInscribeRepository } from "../interfaces/inscribeRepository";
 
-export class inscribeRepository implements IInscribeRepository{
+export class InscribeRepository implements IInscribeRepository{
 
  async create(data: IInscribe): Promise<IInscribe> {
     try{
@@ -77,7 +77,7 @@ export class inscribeRepository implements IInscribeRepository{
     const setClauses = fields.map((field, index) => `${field} = $${index + 2}`).join(", ");
     const values = Object.values(updateData);
     const sql = `
-       UPDATE Estudiantes
+       UPDATE Inscribe
          SET ${setClauses}
        WHERE cod_e = $1 RETURNING *
     `;
